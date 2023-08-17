@@ -24,7 +24,7 @@ travelRouter.post('/post', async (req, res) => {
         await newTravel.save();
         res.status(201).json(newTravel);
     } catch (error) {
-        res.status(500).json({ error: 'Could not add travel data' });
+        res.status(500).json({ error: 'Could not add travel data',"msg":error.message });
     }
 });
   
